@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -a -i -d -m
+case 
+ls -a -i -d -m -r
