@@ -1,3 +1,3 @@
 #!/bin/bash
-case 
-    ls -a -i -d -m |sortcase 
+ls -a -m -sort
+ 
