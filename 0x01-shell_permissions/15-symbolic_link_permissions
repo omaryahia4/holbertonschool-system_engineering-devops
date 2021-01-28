@@ -1,0 +1,2 @@
+#!/bin/bash
+chown --dereference _hello:betty:holberton
