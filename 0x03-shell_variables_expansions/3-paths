@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -l PATH | grep -c ^d
+echo $PATH | tr ":" "\n" | tr -s "\n" | wc -l
+
