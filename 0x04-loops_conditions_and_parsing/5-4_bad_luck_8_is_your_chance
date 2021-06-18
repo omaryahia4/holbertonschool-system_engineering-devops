@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Display Holberton School 10 times
+i=0
+while [ $i -le 9 ]
+        do
+	if [ $((i+1)) -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $((i+1)) -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	((++i))
+done
