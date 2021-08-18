@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Creates an nginx web sever
+#Creates an nginx web sever
 sudo apt-get -y update
 sudo apt-get -y install nginx
 chmod u+x /var/www/html/index.nginx-debian.html
