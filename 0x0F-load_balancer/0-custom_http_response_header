@@ -3,6 +3,7 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo service nginx start
+chmod u+x
 nl="\\\tadd_header X-Served-By \$hostname;"
 sed -i "/sendfile/i $nl" /etc/nginx/nginx.conf
 sudo service nginx restart
