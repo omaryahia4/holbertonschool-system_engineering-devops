@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Bash script that configures Nginx to run and list on port 80
-cp /etc/nginx/sites-available/default
-cp /etc/nginx/sites-enabled/default
+cp / etc/nginx/sites-available/default
+cp / etc/nginx/sites-enabled/default
 sudo service nginx restart
