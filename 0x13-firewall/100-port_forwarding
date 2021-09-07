@@ -12,8 +12,8 @@
 *nat
 :POSTROUTING ACCEPT [0:0]
 
-# Forward traffic from eth1 through eth0.
--A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
+# Forward traffic from port 8080 to port 80.
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
 
 # don't delete the 'COMMIT' line or these nat table rules won't be processed
 COMMIT
