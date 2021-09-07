@@ -7,11 +7,15 @@
 #   ufw-before-output
 #   ufw-before-forward
 #
-# redirecting port 8080/TCP to port 80/TCP.
 
+# nat Table rules
 *nat
-:PREROUTING ACCEPT [0:0]
--A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+:POSTROUTING ACCEPT [0:0]
+
+# Forward traffic from eth1 through eth0.
+-A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
+
+# don't delete the 'COMMIT' line or these nat table rules won't be processed
 COMMIT
 
 # Don't delete these required lines, otherwise there will be errors
