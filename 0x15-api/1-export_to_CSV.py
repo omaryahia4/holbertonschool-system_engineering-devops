@@ -15,5 +15,5 @@ if __name__ == "__main__":
         csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in tasks:
             csv_writer.writerow([id, employee['username'],
-                               task['completed'],
-                               task['title']])
+                                task['completed'],
+                                task['title']])
