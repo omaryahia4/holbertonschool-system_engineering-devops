@@ -9,4 +9,3 @@ ufw allow 'Nginx HTTP'
 line="\\\tadd_header X-Served-By $HOSTNAME;"
 sed -i "11i $line" /etc/nginx/nginx.conf
 service nginx restart
-
