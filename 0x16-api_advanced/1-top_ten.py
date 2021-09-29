@@ -16,4 +16,4 @@ def top_ten(subreddit):
         for item in res["data"]["children"]:
             print(item["data"]["title"])
     except KeyError:
-        return None
+        print("None")
