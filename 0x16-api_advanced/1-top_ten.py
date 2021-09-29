@@ -11,7 +11,6 @@ def top_ten(subreddit):
     response = requests.get(
         url.format(subreddit), params={"limit": 10})
     res = response.json()
-
     try:
         for item in res["data"]["children"]:
             print(item["data"]["title"])
